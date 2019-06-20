@@ -1,0 +1,118 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M768 0h-512c-53.056 0-96 42.976-96 96v832c0 53.056 42.976 96 96 96h512c52.992 0 96-43.008 96-96v-832c0-53.056-43.008-96-96-96zM800 928c0 17.632-14.368 32-32 32h-512c-17.664 0-32-14.304-32-32v-64.128h576v64.128zM800 831.872h-576v-639.872h576v639.872zM800 160h-576v-64c0-17.664 14.336-32 32-32h512c17.632 0 32 14.336 32 32v64zM576 112c0 8.832-7.2 16-16 16h-96c-8.864 0-16-7.168-16-16v0c0-8.864 7.136-16 16-16h96c8.8 0 16 7.136 16 16v0zM544 911.872c0 8.8-7.2 16-16 16h-32c-8.832 0-16-7.2-16-16v0c0-8.864 7.168-16 16-16h32c8.8 0 16 7.136 16 16v0z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "phone",
+          "tablet",
+          "mobile"
+        ],
+        "grid": 32
+      },
+      "attrs": [],
+      "properties": {
+        "id": 24,
+        "order": 5,
+        "prevSize": 32,
+        "name": "phone"
+      },
+      "setIdx": 3,
+      "setId": 2,
+      "iconIdx": 23
+    },
+    {
+      "icon": {
+        "paths": [
+          "M896 160h-768c-70.688 0-128 57.344-128 128v416c0 70.688 57.312 128 128 128h768c70.688 0 128-57.312 128-128v-416c0-70.656-57.312-128-128-128zM64 328l223.968 168-223.968 168v-336zM960 704c0 35.328-28.736 64-64 64h-768c-35.296 0-64-28.672-64-64l250.624-188 139.776 104.864c17.056 12.736 37.312 19.2 57.6 19.2 20.256 0 40.512-6.432 57.568-19.2l139.808-104.864 250.624 188zM960 664l-224-168 224-168v336zM550.368 595.264c-11.168 8.384-24.416 12.8-38.368 12.8s-27.232-4.448-38.4-12.8l-409.6-307.264c0-35.296 28.704-64 64-64h768c35.264 0 64 28.704 64 64l-409.632 307.264z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "mail",
+          "email",
+          "letter",
+          "envelope",
+          "contact"
+        ],
+        "grid": 32
+      },
+      "attrs": [],
+      "properties": {
+        "id": 26,
+        "order": 4,
+        "prevSize": 32,
+        "name": "mail"
+      },
+      "setIdx": 3,
+      "setId": 2,
+      "iconIdx": 25
+    },
+    {
+      "icon": {
+        "paths": [
+          "M512 0c-176.732 0-320 143.268-320 320 0 320 320 704 320 704s320-384 320-704c0-176.732-143.27-320-320-320zM512 512c-106.040 0-192-85.96-192-192s85.96-192 192-192 192 85.96 192 192-85.96 192-192 192z"
+        ],
+        "tags": [
+          "location",
+          "map-marker",
+          "pin"
+        ],
+        "defaultCode": 59719,
+        "grid": 16,
+        "attrs": []
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "location, map-marker",
+        "name": "location",
+        "order": 3,
+        "id": 72,
+        "prevSize": 32
+      },
+      "setIdx": 4,
+      "setId": 1,
+      "iconIdx": 71
+    }
+  ],
+  "height": 1024,
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "task4",
+        "majorVersion": 1,
+        "minorVersion": 0
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon",
+      "name": "icomoon"
+    },
+    "historySize": 50,
+    "showCodes": true,
+    "gridSize": 16
+  }
+}

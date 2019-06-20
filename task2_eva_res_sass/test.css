@@ -1,0 +1,29 @@
+.a,.b,.c,.d{
+    width: 200px;
+    height: 200px;
+}
+
+.a{
+    position: relative;
+    background-color: red;
+    z-index: 10;
+}
+
+.b{
+    position: relative;
+    background-color: blue;
+    z-index: 100;
+    top:-200px;
+}
+
+.c{
+    background-color: green;
+    z-index: 200;
+    position: absolute;
+}
+
+.d{
+    position:absolute;
+    background-color:black ;
+    z-index: 20;
+}

@@ -1,0 +1,164 @@
+header{
+    font: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 25px;
+    font-family: 'Montserrat';
+    font-size:40px;
+    
+}
+
+body{
+    font-family: 'Montserrat';
+}
+
+p{
+    text-align: center;
+    font-size: 10px;    
+}
+
+.a{
+    text-transform: uppercase;
+    font-style: bold;
+    text-align: center;
+    margin: 18px;
+    font-size: 22px;
+
+}
+
+.b{
+    text-align: center;
+    float: left;
+    margin: 10px 30px 20px 50px;
+    font-size:12px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.form{
+    float: right;
+    top : 10%;
+    z-index: 1;
+    box-shadow: 0px 3px 6px 6px lightgray;
+    width : 350px;
+    height : 460px;
+    margin-right: 65px;
+    margin-left: 10px;
+    padding-left: 10px;
+
+}
+
+form{
+    text-align: center;
+    margin: 30px 30px 0px 30px;
+}
+
+.bigleft{
+    width: 800px;
+    float: left;  
+    
+}
+
+.image{
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-top: 0px;
+    width: 500px;
+    height: 300px;
+    align-items: center;
+    padding: 20px;
+}
+
+.icon {
+    padding: 10px;
+    background: transparent;
+    color: lightgrey;
+    min-width: 50px;
+    text-align: center;
+    border-bottom: 2px lightgray solid;
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    color: lightgrey;
+    
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px lightgray solid;
+    border-left: none;
+   
+}
+
+.input-field:focus {
+    border: 2px solid dodgerblue;
+}
+
+input[type=submit] {
+    width: 80%;
+    background-color: rgb(63, 226, 69);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 30px 10px 30px 30px;
+    box-shadow: 0px 3px 3px 3px lightgray;
+}
+
+input[type=submit]:hover {
+    width: 80%;
+    background-color: rgb(19, 133, 226);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 30px 10px 30px 30px;
+    box-shadow: 0px 3px 3px 3px lightgray;
+}
+
+.loginhere{
+    color: red;
+    font-size: 12px;
+    
+}
+
+.rem{
+    float: left;
+    text-align: left;
+    width:150px;
+    font-size: 12px;
+}
+.forget{
+    float: left;
+    text-align: left;
+    width: 130px;
+    font-size : 12px;
+}
+
+.vl{
+    border-right: 2px solid lightgray;
+    height: 20px;
+    margin-top: 10px;   
+    
+}
+a:hover{
+    color: purple;
+}
+
+a{
+    color: blue;
+}
+
+
+
