@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro';
+}
+
+#wrapper{
+    margin: auto;
+    max-width: 1700px;
+
+}
+.nav-container-1{
+    flex-basis: 30%;
+    padding-right: 2rem;
+}
+
+.nav-container-2{
+    flex-basis: 55%;
+    padding: 0 4rem;
+    border-left: 1px lightgray solid;
+}
+
+.nav-container-3{
+    flex-basis: 15%;
+   padding-left: 1rem;
+    border-left: 1px lightgray solid;
+}
+
+    
+.navigation-item{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;  
+    margin: 0.2rem auto;  
+    .navigation-link{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1rem;
+        .icons{
+            font-size: 1.2rem;
+            flex-basis: 10%;
+            color: maroon;
+            margin-right: 0.5rem;
+        }
+
+        .link{
+            flex-basis: 90%;
+        }
+        
+        p{
+            margin-right: 0.5rem;
+            flex-basis: 50%;
+        }
+        
+        .btn{
+            flex-basis: 50%;
+            margin-left: 1rem;
+        }
+    }
+
+}
+
+.head{
+    padding: 1rem 5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: unwrap;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .logo, .cart{
+        flex-basis: 30%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+
+    .cart{
+        justify-content: flex-end;
+
+        .icon-cart{
+            color: maroon;
+            padding: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .cartitem{
+            font-size: 1rem;
+            padding-left: 1rem;
+        }
+    }
+
+    .logo{
+        .logoimg{
+            flex-basis: 50%;
+            align-self: center;
+                  
+            img{
+                display: block;
+                height: 100px;
+                margin-right: auto;
+            }
+            
+        }
+
+        .logoname{
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
+    }
+
+    
+}
+
+.search{
+    border-left: solid 1px gray;
+    border-right: solid 1px gray;
+    margin: 0 auto;
+    display: block;
+    img{
+        padding: 0 0.5rem;
+        height: 1.5rem;
+    }
+}
+
+.toplink{
+    .breadcrumb{
+        img{
+            padding-right: 1rem;
+            
+        }
+
+        a{
+            font-size: 1.2rem;
+            color: black;
+        }
+    }
+}
+
+.bottomlink{
+    position: relative;
+    height: 30rem;
+    img{
+        width: 100%;
+        height: auto;
+        filter: grayscale(70%);
+    }
+
+    .profile{
+        position: absolute;
+        width: 40%;
+        top: 40%;
+        left: 5%;
+
+        img{
+            display: block;
+            margin-right: auto;
+            width: 30%;
+            border: white 0.5rem solid;
+        }
+
+        p{
+            font-weight: bold;
+            font-size: 2rem;
+            color: white;
+        }
+    }
+    
+    
+
+}
