@@ -1,0 +1,64 @@
+$blue : rgb(36, 150, 226);
+.container{
+    margin: 2% 5%;
+}
+
+header{
+    h1{
+        text-align: center;
+        
+    }
+}
+
+form{
+    
+    
+    #inputlist{
+        width: 25%;
+        margin: 0 auto;
+        height: 30px;
+        display: block;
+        font-size: 20px;
+        border-radius: 3px;
+
+    }
+    
+    #add{
+        background-color: $blue;
+        color: #ffffff;
+        font-weight: bold;
+        display: block;
+        margin: 0.5% auto;
+        height: 35px;
+        border: none;
+        border-radius: 5px;
+        width: 15%;
+
+        
+    }
+
+    #add:hover{
+        background-color: violet;
+    }
+}
+
+#listname{
+    list-style-type: none;   
+    padding: 0;
+    li{
+        
+        font-size: 20px;
+        padding: 1% 1%;
+        border: gray dotted 1px;
+
+        span{
+            float: right;
+            color: red;
+        }
+    }
+
+    li:hover{
+        background-color: lightgray;
+
+    }
+}

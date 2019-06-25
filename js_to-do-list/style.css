@@ -1,0 +1,53 @@
+.container {
+  margin: 2% 5%;
+}
+
+header h1 {
+  text-align: center;
+}
+
+form #inputlist {
+  width: 25%;
+  margin: 0 auto;
+  height: 30px;
+  display: block;
+  font-size: 20px;
+  border-radius: 3px;
+}
+
+form #add {
+  background-color: #2496e2;
+  color: #ffffff;
+  font-weight: bold;
+  display: block;
+  margin: 0.5% auto;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  width: 15%;
+}
+
+form #add:hover {
+  background-color: violet;
+}
+
+#listname {
+  list-style-type: none;
+  padding: 0;
+}
+
+#listname li {
+  font-size: 20px;
+  padding: 1% 1%;
+  border: gray dotted 1px;
+}
+
+#listname li span {
+  float: right;
+  color: red;
+}
+
+#listname li:hover {
+  background-color: lightgray;
+}
+/*# sourceMappingURL=style.css.map */

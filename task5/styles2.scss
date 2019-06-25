@@ -1,3 +1,8 @@
+$pink : rgb(238, 22, 148);
+$lightgray : rgb(221, 221, 221);
+$blue: rgb(25, 81, 170);
+$teal:rgb(5, 158, 158);
+$gray : rgb(128, 128, 128);
 *{
     margin: 0;
     padding: 0;
@@ -44,7 +49,7 @@
         .icons{
             font-size: 1.2rem;
             flex-basis: 10%;
-            color: maroon;
+            color: $pink;
             margin-right: 0.5rem;
         }
 
@@ -87,7 +92,7 @@
         justify-content: flex-end;
 
         .icon-cart{
-            color: maroon;
+            color: $pink;
             padding: 0.5rem;
             font-size: 1.4rem;
         }
@@ -150,7 +155,7 @@
     height: 30rem;
     img{
         width: 100%;
-        height: auto;
+        height: 30rem;
         filter: grayscale(70%);
     }
 
@@ -165,6 +170,7 @@
             margin-right: auto;
             width: 30%;
             border: white 0.5rem solid;
+            height: auto;
         }
 
         p{
@@ -173,7 +179,258 @@
             color: white;
         }
     }
+
+}
+
+.items{
+    .container{
+        .main{
+            display: flex;
+            flex-direction: row;
+            margin: 3% 0;
+        }
+    }
+}
+.titlename{
+    background-color: $pink;
+    color: white;
+    padding: 0.65rem 0;
+    text-align: center;
+}
+
+.pricerange{
+    margin: 0.75rem 0;
+}
+
+.filter{
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+
+    .main_filter{
+        flex-basis: 43%;
+        border: 1px solid $lightgray;
+        margin-bottom: 2rem;
+        
+        
+        .price{
+            border: solid 1px $lightgray;
+            padding: 0.75rem 0;
+            text-align: center;
+        }
+
+        .price_content{
+            height: auto;
+            text-align: left;
+            padding-left: 0.2rem;         
+            
+
+            ul{
+                
+                li{
+                    margin-left: 3rem;
+                }
+            }
+
+            input[type="checkbox"]{
+                padding: 0.2rem;
+            }
+        }
+    }
+
+    .brandbyletter{
+        flex-basis: 25%;
+        border: 1px solid $lightgray;
+        
+        .letters{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            
+
+            .letter{
+                flex-basis: 20%;
+                margin-bottom: 0.75rem;
+                padding-left: 0.2rem;
+            }
+
+        }
+        .d{
+            color: $pink;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            border-top: solid 1px $lightgray;
+            border-bottom: solid 1px $lightgray;
+        }
+    }
+
+}
+
+.products{
+    flex-basis: 78%;
+    margin-left: 2%;
+    .navi{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: $pink;
+        padding: 0.65rem 0;
+        color: white;
+        .navi_drops, .navi_dropsa{
+            flex-basis: 15%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .navi_dropsa{
+            margin-right: auto;
+            
+        }
+    }
+
+    .productitems{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+}
+
+.card{
+    flex-basis: 31%;
+    margin-top: 2rem;
+
+    .card-body{
+
+        h3{
+            font-size: 1.3rem;
+            color: $blue;
+        }
+    }
+
+    .card-footer{
+        background-color: $teal;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        color: #ffffff;
+        font-size: 1.2rem;
+
+        i{
+            padding: 0 1rem;
+            border-left: 1px #ffffff solid;
+        }
+    }
+}
+
+.hearfromclient{
+    background-image: url("img/hands-woman-laptop-notebook\ Image-8.png");
+    .container{
+        
+        .main{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            padding-top: 6rem;
+        }
+    }
+}
+
+.happyclient{
+    flex-basis: 30%;
+
+    p{
+        color: #ffffff;
+        padding-top: 2rem;
+    }
     
+    .viewall{
+        width: 80%;
+        height:3rem; 
+        margin-top: 2rem;
+        color: white;
+        background-color: $teal;
+        border: none;
+    }
+
+}
+
+.clientstories{
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     
 
+    .clientdesc{
+        background-color: #fff;
+        flex-basis: 40%;
+        border: none;
+        border-radius: 3px;
+        margin-bottom: 4rem;
+        position: relative;
+        padding: 2.8rem 1.5rem 1rem 1.5rem;
+
+        img{
+            position: absolute;
+            top: -2.5rem;
+            left: 35%;
+        }
+    }
+}
+
+footer{
+    .container{
+        .footdiv{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+
+        }
+    }
+}
+
+.footitems{
+    flex-basis: 20%;
+    margin: 2rem 0;
+    .foottitle{
+        font-weight: bold;
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+
+    .footlist{
+        list-style-type: none;
+        color: gray;
+        font-size: 0.8rem;
+    }
+    .social{
+        .socicon{
+            margin-right: 0.5rem;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.copyright{
+    border-top: 1px solid $gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.8rem 0;
+    .copy{
+        color: $gray;
+        font-size: 0.8rem;
+
+    }
 }
