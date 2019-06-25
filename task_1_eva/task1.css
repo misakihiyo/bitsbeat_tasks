@@ -101,7 +101,7 @@ form{
     border: 2px solid dodgerblue;
 }
 
-input[type=submit] {
+#submitbutton {
     width: 80%;
     background-color: rgb(63, 226, 69);
     color: white;
@@ -114,17 +114,14 @@ input[type=submit] {
     box-shadow: 0px 3px 3px 3px lightgray;
 }
 
-input[type=submit]:hover {
-    width: 80%;
+#submitbutton:hover {
+    
     background-color: rgb(19, 133, 226);
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 30px 10px 30px 30px;
-    box-shadow: 0px 3px 3px 3px lightgray;
+   
+}
+
+#submitbutton:disabled{
+    background-color: antiquewhite;
 }
 
 .loginhere{

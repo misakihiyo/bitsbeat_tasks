@@ -27,7 +27,7 @@
         </div>
 
         <div class = "form">
-            <form>
+            <form id="myform" name ="myform">
                 <div class = "a">
                     <b>sign up here<br> </b>                    
                 </div>
@@ -35,31 +35,43 @@
                 <div class="input-container">
                     <i class="fa fa-user icon"></i>
                     <div class="vl"></div>
-                    <input class="input-field" type="text" name = "name" placeholder="Name" required=""><br>
+                    <input id = "fname" class="input-field" type="text" name = "name" placeholder="Name" onkeyup="validatefunction(this)" >
+                    <p id= "namevalid"></p>
                 </div>
                     
                 <div class="input-container">
                     <i class="fa fa-phone icon"></i> 
-                    <div class="vl"></div><input class = "input-field" type="text" name="Phone" placeholder="Phone" required="">
+                    <div class="vl"></div>
+                    <input class = "input-field" id="phoneno" type="text" name="Phone" placeholder="Phone" onkeyup="validatefunction(this)">
+                    <p id="phonevalid"></p>
                 </div>
 
                 <div class="input-container">
                     <i class="fa fa-envelope icon"></i>
-                       <div class="vl"></div>
-                       <input class="input-field" type="email" name = "emailid" placeholder="Email" required=""><br>
-                        
+                    <div class="vl"></div>
+                    <input id= "emailid" class="input-field" type="email" name = "emailid" placeholder="Email"  onkeyup="validatefunction(this)"><br>
+                    <p id="emailvalid"></p>
                     </div>
 
                                       
                 <div class="input-container">
                     <i class="fa fa-lock icon"></i>
                     <div class="vl"></div>
-                    <input class="input-field" type="password" name = "passw" placeholder="Password"><br>
-                        
-                    </div>
+                    <input id="newpassword" class="input-field" type="password" name = "passw" placeholder="Password" onkeyup="textfun()"><br>
+                    <i class="fa-eye far" onclick="clickfunction(this)"></i>   
+                    <p id="passwordmatch"></p>
+                </div>
+
+                <div class="input-container">
+                    <i class="fa fa-lock icon"></i>
+                    <div class="vl"></div>
+                    <input id= "retypepassword" class="input-field" type="password" name = "passw" placeholder="Retype Password" onkeyup="textfun()"><br>
+                    <i class="fa-eye far" onclick="clickfunction2(this)"></i>   
+                    
+                </div>
 
                 <div class="rem" >
-                    <input type="checkbox" name="remember"> Remember Me       
+                    <input id= "terms" type="checkbox" onclick="checkfunction()"> Accept terms and conditions       
                                                
                 </div>
 
@@ -68,14 +80,148 @@
                 </div>             
                    
                 <div class="input-container">
-                    <input type= "submit" value="SIGN UP"><br>
+                    <button id= "submitbutton" onclick="buttonclickfunction()" type="button" disabled >SIGN UP<br>
                 </div>                                
                  
                     
             </form>
 
+            <h4 id="cat">Email validation</h4>
+            <h4 id = "apple">password matching</h4>
+
             <p><b>Don't have an account? <a class= "loginhere" href="day2.html">Login Here</a></b></p>
         </div>
+
+        <script>
+            var total_validation;
+
+            function clickfunction(z){
+                p = document.getElementById("newpassword");
+                z.classList.toggle("fa-lock");
+                if (p.type ==="password"){
+                    p.type= "text";
+                }
+
+                else{
+                    p.type = "password";
+                }
+            }
+
+            function clickfunction2(z){
+                p = document.getElementById("retypepassword");
+                z.classList.toggle("fa-lock");
+                if (p.type ==="password"){
+                    p.type= "text";
+                }
+
+                else{
+                    p.type = "password";
+                }
+            }
+
+            function textfun(){
+                var newpass = document.getElementById("newpassword").value;
+                var retype = document.getElementById("retypepassword").value;
+                if(newpass == retype){
+                    document.getElementById("passwordmatch").innerHTML = "Match";
+                }
+
+                else{
+                    document.getElementById("passwordmatch").innerHTML = "doesn't match";
+                    
+                }
+            }
+
+            function validatefunction(vlue){
+                var val = vlue.value;
+                var a;
+                var idname;
+                if(vlue.id == "emailid"){
+                    idname = "emailvalid";
+                    a=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                }
+                else if(vlue.id == "phoneno"){
+                    idname = "phonevalid";
+                    a=/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+                }
+                
+                else if(vlue.id == "fname"){
+                    idname = "namevalid";
+                    a=/^[A-Za-z ,.'-]+$/i;
+                }
+
+                if (val.match(a))
+                    {   
+                        document.getElementById(idname).innerHTML = "valid";
+                        return (true);
+                        
+                    }
+                document.getElementById(idname).innerHTML = "Invalid";
+                return (false)
+            }
+
+
+           
+            function checkfunction(){
+                var idnames= ["fname","phoneno","emailid","newpassword","retypepassword"];
+                var fieldname;
+                let checkval = 0;
+
+             
+
+                if(document.getElementById("terms").checked == true){
+                    for (i=0; i<5 ; i++){
+                        fieldname = idnames[i];
+                        
+                        if( document.getElementById("myform").elements[i].value != ""){
+                            checkval += 1; 
+                        
+                        }
+                        
+                    }
+                 
+
+                    if (checkval === 5 && document.getElementById("terms").checked==true){
+                        document.getElementById('submitbutton').disabled = false;
+                        
+                    }
+
+                    else{
+                        document.getElementById('submitbutton').disabled = true;
+                         
+                    }
+                }         
+
+            }
+
+            function buttonclickfunction(){
+                var idnames= ["fname","phoneno","emailid","newpassword","retypepassword"];
+                var keyval = [];
+                var i;
+                var stringname;
+
+                a = document.getElementById("namevalid").innerHTML;
+                b= document.getElementById("phonevalid").innerHTML;
+                c=document.getElementById("emailvalid").innerHTML;
+                console.log(a);
+                if(a =="valid" && b =="valid" && c =="valid"){
+                    document.location="./newpage.html";
+                     
+
+                    for(i=0; i<5; i++){
+                        value = document.getElementById(idnames[i]).value;
+                        stringname ="data"+i;                   
+                        localStorage.setItem(stringname,value);
+                    }
+                }
+
+                else{
+                    alert("invalid");
+                }
+            }
+
+            
+        </script>
 
             
 
