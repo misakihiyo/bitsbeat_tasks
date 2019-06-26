@@ -109,9 +109,36 @@ form{
   
   
 .modal-content {
-    background-color: #fefefe;
+    background-color: $pink;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
+
+    h3{
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    #modaltext{
+        border-radius: 5px;
+        border: navy 1px solid;
+        height:2rem;
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        background-color: #fff;
+    }
+
+    #edit{
+        width: 20%;
+        height: 2rem;
+        border: none;
+        border-radius: 5px;
+        background-color : $blue;
+        color: white;
+        margin : 1rem auto;
+        display: block;
+       
+    }
 }
