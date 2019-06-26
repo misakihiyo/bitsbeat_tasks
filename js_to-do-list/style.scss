@@ -51,9 +51,9 @@ form{
         padding: 1% 1%;
         border: gray dotted 1px;
 
-        span{
-            float: right;
-            color: red;
+        .delbutton{
+            float:right;
+            height: 2rem;
         }
     }
 

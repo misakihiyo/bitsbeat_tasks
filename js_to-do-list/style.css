@@ -42,9 +42,9 @@ form #add:hover {
   border: gray dotted 1px;
 }
 
-#listname li span {
+#listname li .delbutton {
   float: right;
-  color: red;
+  height: 2rem;
 }
 
 #listname li:hover {
