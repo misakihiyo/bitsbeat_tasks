@@ -269,6 +269,9 @@ $gray : rgb(128, 128, 128);
 
 footer{
     .container{
+        border-top: 1px $lightgray solid;
+        border-bottom: 1px $lightgray solid;
+
         .footdiv{
             display: flex;
             flex-direction: row;
@@ -302,7 +305,7 @@ footer{
 }
 
 .copyright{
-    border-top: 1px solid $gray;
+   
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -311,5 +314,47 @@ footer{
         color: $gray;
         font-size: 0.8rem;
 
+    }
+}
+
+.controls-top{
+    padding: 0.5rem 0;
+    background-color: $pink;
+    padding-left: 95%;
+    margin: 1.5rem 0;
+    
+    a{
+        color: #fff;
+        
+        i{
+            font-size: 1.5rem;
+            margin: 0.25rem;
+        }
+    }
+    
+}
+
+.card{
+    .card-body{
+
+        h3{
+            font-size: 1.3rem;
+            color: $blue;
+        }
+    }
+
+    .card-footer{
+        background-color: $teal;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        color: #ffffff;
+        font-size: 1.2rem;
+
+        i{
+            padding: 0 1rem;
+            border-left: 1px #ffffff solid;
+        }
     }
 }

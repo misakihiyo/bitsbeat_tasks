@@ -4055,6 +4055,7 @@ input[type="button"].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  color: #000;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -4068,17 +4069,18 @@ input[type="button"].btn-block {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #dee2e6;
+  border: 1px solid #dee2e6;
+  
+  margin-top: 1.25rem;
 }
 
 .nav-tabs .nav-item {
-  margin-bottom: -1px;
+  border: none;
 }
 
 .nav-tabs .nav-link {
   border: 1px solid transparent;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  
 }
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
@@ -4093,9 +4095,10 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
+  color: #f02e9f;
+  border-top: 0.2rem solid;
   background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff;
+  border-color:  #f02e9f #dee2e6 #fff;
 }
 
 .nav-tabs .dropdown-menu {
@@ -4130,6 +4133,8 @@ input[type="button"].btn-block {
 
 .tab-content > .tab-pane {
   display: none;
+  border: 1px solid #dee2e6;;
+  padding: 1rem;
 }
 
 .tab-content > .active {
@@ -6228,6 +6233,7 @@ a.close.disabled {
   position: relative;
   width: 100%;
   overflow: hidden;
+  
 }
 
 .carousel-inner::after {
@@ -6361,7 +6367,7 @@ a.close.disabled {
 }
 
 .carousel-indicators {
-  position: absolute;
+  margin-top: 2%;
   right: 0;
   bottom: 0;
   left: 0;
@@ -6380,13 +6386,14 @@ a.close.disabled {
   box-sizing: content-box;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
-  width: 30px;
-  height: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #0c5460;
   background-clip: padding-box;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;

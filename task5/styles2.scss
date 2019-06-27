@@ -390,6 +390,8 @@ $gray : rgb(128, 128, 128);
 
 footer{
     .container{
+        border-top: $lightgray 1px solid;
+        border-bottom: $lightgray 1px solid;
         .footdiv{
             display: flex;
             flex-direction: row;
@@ -423,7 +425,7 @@ footer{
 }
 
 .copyright{
-    border-top: 1px solid $gray;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;

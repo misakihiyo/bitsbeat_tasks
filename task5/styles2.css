@@ -485,6 +485,11 @@
   left: 35%;
 }
 
+footer .container {
+  border-top: #dddddd 1px solid;
+  border-bottom: #dddddd 1px solid;
+}
+
 footer .container .footdiv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -525,7 +530,6 @@ footer .container .footdiv {
 }
 
 .copyright {
-  border-top: 1px solid gray;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
