@@ -50,7 +50,7 @@ var li = document.getElementsByTagName("li");
   for (i=0; i<li.length; i++){
     let checkbox = document.getElementsByClassName("far");
     let checkb = checkbox[i];
-    var count = i;
+    
     li[i].onclick = function(){
       if (this.style.color == "white"){      
         this.style.color = "black";
@@ -93,12 +93,15 @@ function deletefunction(){
   for (i = 0; i < delbut.length; i++) {
     
     delbut[i].onclick = function() {
+      console.log(i);
+      
       var div = this.parentElement;
       var key = div.id;
       localStorage.removeItem(key);
       var ul = div.parentElement;
       ul.removeChild(div);   
-            
+       
+       
     } 
   }
 }
@@ -114,20 +117,22 @@ function editfunction(){
       var editbutton = document.getElementById("edit");
 
       modal.style.display ="block";
-      var val=document.getElementById("modaltext").value;
-      var div = this.parentElement;
-      var key = div.id;
+      let val=document.getElementById("modaltext").value;
+      let div = this.parentElement;
+      let key = div.id;
+      var textnode = document.createTextNode("");
       
-      editbutton.onclick = function(){
-        modal.style.display="none";
-        console.log(val);
+      editbutton.addEventListener("click" ,function(){
         
+        modal.style.display="none";       
         var textnode = document.createTextNode(val);
-        
+      
+        console.log(textnode);             
         div.replaceChild(textnode,div.childNodes[0]);
+        div.appendChild(textnode);
         
         localStorage.setItem(key,val);
-      }
+      });
       
             
     }; 
@@ -140,14 +145,16 @@ function editfunction(){
 
 
 
-// function replacep(i){
+// function replacep(){
+//   console.log(i);
+//   debugger;
 //   let li = document.getElementsByTagName("li");
 //   for (var j=i; j<li.length; j++){
 //     let m = j+1;
 //     let idname = "data" +j;
 //     let idname2 = "data" + m;
 //     let itemval = localStorage.getItem(idname2);
-//     console.log(itemval);
+    
 //     localStorage.setItem(idname, itemval);
 //   }
 // }
