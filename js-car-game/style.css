@@ -34,7 +34,7 @@ body {
   text-align: center;
 }
 
-.container .score #highscore {
+.container .score .highscore {
   width: 50%;
   background-color: #158a8a;
   color: white;
@@ -50,10 +50,11 @@ body {
   height: 41rem;
   background-color: #464646;
   position: relative;
+  overflow: hidden;
 }
 
 .container .road .line {
-  height: 25rem;
+  height: 15rem;
   background-color: #ffffff;
   width: 1%;
   float: left;
@@ -87,6 +88,8 @@ body {
   height: 10%;
   width: 10%;
   position: absolute;
+  bottom: 85%;
+  display: none;
 }
 
 .container .road .offensivecar img {
@@ -96,20 +99,14 @@ body {
 
 .container .road #car1 {
   left: 10%;
-  bottom: 85%;
-  display: none;
 }
 
 .container .road #car2 {
   left: 45%;
-  bottom: 85%;
-  display: none;
 }
 
 .container .road #car3 {
   left: 75%;
-  bottom: 85%;
-  display: none;
 }
 
 .container .gear {
@@ -138,7 +135,7 @@ body {
   display: none;
 }
 
-.container .restart #sc {
+.container .restart .sc {
   display: block;
   margin-top: 30%;
   margin: 0 auto;
@@ -146,7 +143,7 @@ body {
   text-align: center;
 }
 
-.container .restart #startbutton {
+.container .restart .startbutton {
   color: #000000;
   background-color: yellow;
   display: block;
@@ -158,11 +155,11 @@ body {
   border-radius: 3px;
 }
 
-.container .restart #startbutton:hover {
+.container .restart .startbutton:hover {
   background-color: orange;
 }
 
-.container .restart #startbutton:active {
+.container .restart .startbutton:active {
   background-color: purple;
 }
 /*# sourceMappingURL=style.css.map */

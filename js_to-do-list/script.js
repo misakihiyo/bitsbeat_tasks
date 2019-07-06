@@ -1,11 +1,17 @@
 var count = localStorage.length;
 
 function displayList(){
-var count = localStorage.length;
-  for (i=0; i<count ; i++){
+  var counting = localStorage.length;
+  for (i=0; i<counting ; i++){
     var idname = "data" + i;
     var newitem = localStorage.getItem(idname);
+    if (newitem == null){
+      counting +=1;
+    }
+
+    else{
     puttingonlist(idname,newitem);
+    }
        
   } 
   
@@ -19,7 +25,6 @@ var count = localStorage.length;
 function puttingonlist(idname,newitem){
   var newt= document.createElement("li");
   var toappend = document.createTextNode(newitem);
-  
       
   newt.appendChild(toappend);
   newt.setAttribute("id", idname);
@@ -34,7 +39,6 @@ function puttingonlist(idname,newitem){
   editbutton.className="editbutton";
   editbutton.appendChild(txtbut);
   newt.appendChild(editbutton);
-
   
   var deletebutton = document.createElement("button");    
   var txt = document.createTextNode("Delete");   
@@ -45,7 +49,6 @@ function puttingonlist(idname,newitem){
   
 function clickfucntion(){
 var li = document.getElementsByTagName("li");
-
 
   for (i=0; i<li.length; i++){
     let checkbox = document.getElementsByClassName("far");
@@ -76,10 +79,21 @@ var li = document.getElementsByTagName("li");
 
 
 function addtolist(){
-  var idname = "data" + count;
+
+  for (i =0; i <count; i++){
+    var idname = "data" + i;
+    if (localStorage.getItem(idname) == null){
+      break;
+    }
+
+    else {
+      continue;
+    }
+  }
   var newitem = document.getElementById("inputlist").value;
   localStorage.setItem(idname, newitem );
   puttingonlist(idname,newitem);
+  
 
   count +=1;
   deletefunction(); 
@@ -163,4 +177,3 @@ function editfunction(){
 
 
 
-  
