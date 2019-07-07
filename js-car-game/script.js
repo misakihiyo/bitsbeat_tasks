@@ -62,7 +62,11 @@ function mainFunction(){
         mycarleft = parseInt(obj.mycarleft);
         mycartop = parseInt(obj.mycartop);
 
-        if (mycarleft == offcarleft && offcarbottom == 19){
+        if ((mycarleft == offcarleft && offcarbottom == 19) ||
+            (mycarleft == offcarleft+10 && offcarbottom <=19) ||
+            (mycarleft+10 == offcarleft && offcarbottom <=19)
+            
+            ){
             console.log("collision");
             clearInterval(m);
             clearInterval(p);
