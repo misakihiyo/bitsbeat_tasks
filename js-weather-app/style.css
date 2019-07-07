@@ -1,0 +1,97 @@
+body {
+  background-image: url(/img/1681413.jpg);
+  background-size: 103%;
+}
+
+.container {
+  display: block;
+  margin: 5rem auto;
+}
+
+.container header, .container main {
+  background-color: #9ff1ff;
+  position: relative;
+  width: 40%;
+  height: 5rem;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container header .search, .container main .search {
+  position: absolute;
+  left: 35%;
+  top: 30%;
+}
+
+.container main {
+  margin: 2rem auto;
+  height: 20rem;
+  background-color: #60d2ff;
+  padding: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container main .city {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 8rem;
+  border: #111111 double 4px;
+  border-radius: 5px;
+}
+
+.container main .temperature, .container main .humidity {
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+  height: 7rem;
+  border: #111111 double 4px;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 20px;
+  color: navy;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.city .city-icon-holder {
+  width: 100%;
+}
+
+.city .city-icon-holder #cityname {
+  font-size: 30px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 2rem;
+  font-weight: bold;
+  color: navy;
+}
+
+.city .city-icon-holder img {
+  display: block;
+  margin: 0.5rem auto;
+}
+
+input[type="text"] {
+  border-radius: 5px;
+  border: #111111 solid 1px;
+  height: 1.5rem;
+  width: 85%;
+  font-size: 0.9rem;
+  padding: 1%;
+  color: darkblue;
+}
+/*# sourceMappingURL=style.css.map */
