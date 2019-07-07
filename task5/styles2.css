@@ -10,10 +10,23 @@
   max-width: 1700px;
 }
 
+@media screen and (max-width: 600px) {
+  #wrapper {
+    width: 210%;
+  }
+}
+
 .nav-container-1 {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
   padding-right: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-container-1 {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
 }
 
 .nav-container-2 {
@@ -23,11 +36,39 @@
   border-left: 1px lightgray solid;
 }
 
+@media screen and (max-width: 600px) {
+  .nav-container-2 {
+    -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
+  }
+}
+
 .nav-container-3 {
   -ms-flex-preferred-size: 15%;
       flex-basis: 15%;
   padding-left: 1rem;
   border-left: 1px lightgray solid;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-container-3 {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+}
+
+.icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .icon {
+    display: block;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    font-size: 20px;
+    margin: 1rem;
+  }
 }
 
 .navigation-item {
@@ -176,6 +217,12 @@
   height: 1.5rem;
 }
 
+@media screen and (max-width: 600px) {
+  .search {
+    float: right;
+  }
+}
+
 .toplink .breadcrumb img {
   padding-right: 1rem;
 }
@@ -227,6 +274,12 @@
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 3% 0;
+}
+
+@media screen and (max-width: 600px) {
+  .items {
+    position: relative;
+  }
 }
 
 .titlename {
@@ -316,10 +369,28 @@
   border-bottom: solid 1px #dddddd;
 }
 
+@media screen and (max-width: 600px) {
+  .filter {
+    display: none;
+    position: absolute;
+    top: 4rem;
+    left: 30%;
+    background-color: #fff;
+    z-index: 3;
+  }
+}
+
 .products {
   -ms-flex-preferred-size: 78%;
       flex-basis: 78%;
   margin-left: 2%;
+}
+
+@media screen and (max-width: 600px) {
+  .products {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 .products .navi {
@@ -341,7 +412,7 @@
   color: white;
 }
 
-.products .navi .navi_drops, .products .navi .navi_dropsa {
+.products .navi .navi_drops, .products .navi .navi_dropsa, .products .navi .filterbutton {
   -ms-flex-preferred-size: 15%;
       flex-basis: 15%;
   display: -webkit-box;
@@ -356,6 +427,19 @@
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.products .navi .filterbutton {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .products .navi .filterbutton {
+    display: block;
+    border: white 1px solid;
+    margin-right: 2rem;
+    text-align: center;
+  }
 }
 
 .products .navi .navi_dropsa {
@@ -382,6 +466,13 @@
   -ms-flex-preferred-size: 31%;
       flex-basis: 31%;
   margin-top: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+  }
 }
 
 .card .card-body h3 {
@@ -433,14 +524,38 @@
   padding-top: 6rem;
 }
 
+@media screen and (max-width: 600px) {
+  .hearfromclient .container .main {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .happyclient {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
 }
 
+@media screen and (max-width: 600px) {
+  .happyclient {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0 20%;
+  }
+}
+
 .happyclient p {
   color: #ffffff;
   padding-top: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .happyclient p {
+    text-align: center;
+  }
 }
 
 .happyclient .viewall {
@@ -450,6 +565,13 @@
   color: white;
   background-color: #059e9e;
   border: none;
+}
+
+@media screen and (max-width: 600px) {
+  .happyclient .viewall {
+    display: block;
+    margin: 1rem auto;
+  }
 }
 
 .clientstories {
@@ -468,6 +590,14 @@
       justify-content: space-around;
 }
 
+@media screen and (max-width: 600px) {
+  .clientstories {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-top: 5rem;
+  }
+}
+
 .clientstories .clientdesc {
   background-color: #fff;
   -ms-flex-preferred-size: 40%;
@@ -477,6 +607,13 @@
   margin-bottom: 4rem;
   position: relative;
   padding: 2.8rem 1.5rem 1rem 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .clientstories .clientdesc {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
 }
 
 .clientstories .clientdesc img {
@@ -504,6 +641,8 @@ footer .container .footdiv {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footitems {
@@ -512,10 +651,24 @@ footer .container .footdiv {
   margin: 2rem 0;
 }
 
+@media screen and (max-width: 600px) {
+  .footitems {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    margin: 1rem 2%;
+  }
+}
+
 .footitems .foottitle {
   font-weight: bold;
   font-size: 1rem;
   margin: 1rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  .footitems .foottitle {
+    font-size: 2rem;
+  }
 }
 
 .footitems .footlist {
@@ -524,9 +677,21 @@ footer .container .footdiv {
   font-size: 0.8rem;
 }
 
+@media screen and (max-width: 600px) {
+  .footitems .footlist {
+    font-size: 1.5rem;
+  }
+}
+
 .footitems .social .socicon {
   margin-right: 0.5rem;
   margin-top: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .footitems .social .socicon {
+    font-size: 2rem;
+  }
 }
 
 .copyright {
@@ -545,6 +710,5 @@ footer .container .footdiv {
 
 .copyright .copy {
   color: gray;
-  font-size: 0.8rem;
 }
 /*# sourceMappingURL=styles2.css.map */

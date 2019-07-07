@@ -3,6 +3,13 @@ $lightgray : rgb(221, 221, 221);
 $blue: rgb(25, 81, 170);
 $teal:rgb(5, 158, 158);
 $gray : rgb(128, 128, 128);
+
+@mixin desktop{
+    @media screen and (max-width:600px){
+        @content;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -13,23 +20,53 @@ $gray : rgb(128, 128, 128);
     margin: auto;
     max-width: 1700px;
 
+    @include desktop(){
+        width: 210%;
+    }
 }
+
 .nav-container-1{
     flex-basis: 30%;
     padding-right: 2rem;
+
+    @include desktop(){
+        flex-basis: 50%;
+    }
 }
 
 .nav-container-2{
     flex-basis: 55%;
     padding: 0 4rem;
     border-left: 1px lightgray solid;
+    @include desktop(){
+        flex-basis: 75%;
+    }
 }
 
 .nav-container-3{
     flex-basis: 15%;
    padding-left: 1rem;
     border-left: 1px lightgray solid;
+    
+    @include desktop(){
+        flex-basis: 25%;
+
+    }
+  
 }
+.icon{
+    display: none;
+
+    @include desktop(){
+        display: block;
+        flex-basis: 50%;
+        font-size: 20px;
+        margin: 1rem;
+      
+        
+    }
+}
+
 
     
 .navigation-item{
@@ -134,6 +171,10 @@ $gray : rgb(128, 128, 128);
         padding: 0 0.5rem;
         height: 1.5rem;
     }
+
+    @include desktop(){
+        float: right;
+    }
 }
 
 .toplink{
@@ -187,8 +228,13 @@ $gray : rgb(128, 128, 128);
         .main{
             display: flex;
             flex-direction: row;
+            
             margin: 3% 0;
         }
+    }
+
+    @include desktop(){
+        position: relative;
     }
 }
 .titlename{
@@ -266,11 +312,24 @@ $gray : rgb(128, 128, 128);
         }
     }
 
+    @include desktop(){
+        display: none;
+        position: absolute;
+        top: 4rem;
+        left: 30%;
+        background-color: #fff;
+        z-index: 3;
+    }
+
 }
 
 .products{
     flex-basis: 78%;
     margin-left: 2%;
+
+    @include desktop(){
+        flex-basis: 100%;
+    }
     .navi{
         display: flex;
         flex-direction: row;
@@ -279,12 +338,23 @@ $gray : rgb(128, 128, 128);
         background-color: $pink;
         padding: 0.65rem 0;
         color: white;
-        .navi_drops, .navi_dropsa{
+        .navi_drops, .navi_dropsa,.filterbutton{
             flex-basis: 15%;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-around;
+        }
+
+        .filterbutton{
+            display: none;
+
+            @include desktop(){
+                display: block;
+                border: white 1px solid;
+                margin-right: 2rem;
+                text-align: center;
+            }
         }
 
         .navi_dropsa{
@@ -305,6 +375,10 @@ $gray : rgb(128, 128, 128);
 .card{
     flex-basis: 31%;
     margin-top: 2rem;
+
+    @include desktop(){
+        flex-basis: 49%;
+    }
 
     .card-body{
 
@@ -340,6 +414,12 @@ $gray : rgb(128, 128, 128);
             justify-content: space-evenly;
             align-items: flex-start;
             padding-top: 6rem;
+            @include desktop(){
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            
         }
     }
 }
@@ -347,9 +427,18 @@ $gray : rgb(128, 128, 128);
 .happyclient{
     flex-basis: 30%;
 
+    @include desktop(){
+        flex-basis: 100%;        
+        margin: 0 20%;
+    }
+
     p{
         color: #ffffff;
         padding-top: 2rem;
+
+        @include desktop(){
+            text-align: center;
+        }
     }
     
     .viewall{
@@ -359,6 +448,11 @@ $gray : rgb(128, 128, 128);
         color: white;
         background-color: $teal;
         border: none;
+
+        @include desktop(){
+            display: block;
+            margin: 1rem auto;
+        }
     }
 
 }
@@ -369,6 +463,11 @@ $gray : rgb(128, 128, 128);
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+
+    @include desktop(){
+        flex-basis: 100%;
+        margin-top: 5rem;
+    }
     
 
     .clientdesc{
@@ -379,6 +478,10 @@ $gray : rgb(128, 128, 128);
         margin-bottom: 4rem;
         position: relative;
         padding: 2.8rem 1.5rem 1rem 1.5rem;
+
+        @include desktop(){
+            flex-basis: 48%;
+        }
 
         img{
             position: absolute;
@@ -397,6 +500,7 @@ footer{
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
+            flex-wrap: wrap;
 
         }
     }
@@ -405,21 +509,40 @@ footer{
 .footitems{
     flex-basis: 20%;
     margin: 2rem 0;
+
+    @include desktop(){
+        flex-basis: 45%;
+        margin: 1rem 2%;
+    }
+
+
     .foottitle{
         font-weight: bold;
         font-size: 1rem;
         margin: 1rem 0;
+
+        @include desktop(){
+            font-size: 2rem;
+        }
     }
 
     .footlist{
         list-style-type: none;
         color: gray;
         font-size: 0.8rem;
+
+        @include desktop(){
+            font-size: 1.5rem;
+        }
     }
     .social{
         .socicon{
             margin-right: 0.5rem;
             margin-top: 1rem;
+
+            @include desktop(){
+                font-size: 2rem;
+            }
         }
     }
 }
@@ -431,8 +554,8 @@ footer{
     justify-content: space-between;
     margin: 0.8rem 0;
     .copy{
-        color: $gray;
-        font-size: 0.8rem;
+        color: $gray;              
 
     }
 }
+

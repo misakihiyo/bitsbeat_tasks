@@ -3,6 +3,12 @@ $lightgray : rgb(221, 221, 221);
 $blue: rgb(25, 81, 170);
 $teal:rgb(5, 158, 158);
 $gray : rgb(128, 128, 128);
+@mixin desktop{
+    @media screen and (max-width:600px){
+        @content;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -13,23 +19,53 @@ $gray : rgb(128, 128, 128);
     margin: auto;
     max-width: 1700px;
 
+    @include desktop(){
+        width: 210%;
+    }
 }
+
 .nav-container-1{
     flex-basis: 30%;
     padding-right: 2rem;
+
+    @include desktop(){
+        flex-basis: 50%;
+    }
 }
 
 .nav-container-2{
     flex-basis: 55%;
     padding: 0 4rem;
     border-left: 1px lightgray solid;
+    @include desktop(){
+        flex-basis: 75%;
+    }
 }
 
 .nav-container-3{
     flex-basis: 15%;
    padding-left: 1rem;
     border-left: 1px lightgray solid;
+    
+    @include desktop(){
+        flex-basis: 25%;
+
+    }
+  
 }
+.icon{
+    display: none;
+
+    @include desktop(){
+        display: block;
+        flex-basis: 50%;
+        font-size: 20px;
+        margin: 1rem;
+      
+        
+    }
+}
+
 
     
 .navigation-item{
@@ -133,6 +169,10 @@ $gray : rgb(128, 128, 128);
     img{
         padding: 0 0.5rem;
         height: 1.5rem;
+    }
+
+    @include desktop(){
+        float: right;
     }
 }
 

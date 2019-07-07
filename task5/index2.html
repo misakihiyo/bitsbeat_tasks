@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="bootstrap-reboot.css">
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="icons/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -18,7 +19,7 @@
     <div id="wrapper">
         
         <header>
-            <nav class="navbar navbar-expand bg-light">
+            <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-expand-md bg-light">
                 <div class="nav-container-1">
                     <ul class="navigation-item">
                         <li class="navigation-link">
@@ -87,8 +88,9 @@
                 </div>
             </div>
 
-            <nav class="navbar navbar-expand bg-light">
-                <ul class="navbar-nav font-weight-bold">
+            <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm bg-light">
+                <div class="icon" id= "bars"><i class="fas fa-bars"></i></div>
+                <ul class="navbar-nav font-weight-bold" id = "navbar">                    
                     <li class="nav-item">
                         <a href="" class="nav-link">HOME</a></li>
                     <li class="nav-item">
@@ -141,7 +143,7 @@
             <section class="items">
                 <div class="container">
                     <div class="main">
-                        <div class="filter">
+                        <div class="filter" id="filter">
                             <div class="main_filter">
                                 <p class="titlename">FILTER</p>
                                 <p class="price">Price</p>
@@ -228,7 +230,8 @@
                         </div>
                         <div class="products">
                             <div class="navi">
-                            <div class="navi_dropsa">           <p>VIEW AS: </p>
+                            <div class="navi_dropsa">           
+                                <p>VIEW AS: </p>
                                 <div class="dropdown">
                                     <button type="button" class="btn dropdown-toggle border text-white" data-toggle="dropdown">Grid</button>
                                     <div class="dropdown-menu">
@@ -237,6 +240,10 @@
                                         <a class="dropdown-item" href="#">Link 3</a>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div id="filterbutton" class="filterbutton">
+                                Filter
                             </div>
 
                             <div class="navi_drops">
@@ -249,7 +256,6 @@
                                         <a class="dropdown-item" href="#">Link c</a>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="navi_drops">
                                 <p>SORT BY :</p>
@@ -534,6 +540,38 @@
         </footer>
         
     </div>
+
+    <script>
+        let bars = document.getElementById("bars");
+        let navbar = document.getElementById("navbar")
+        let filterbutton = document.getElementById("filterbutton");
+        let filter = document.getElementById("filter");
+        bars.addEventListener("click",function(){
+            
+            if (navbar.style.display == "block")
+            {
+                navbar.style.display = "none";
+            }
+
+            else{
+                navbar.style.display = "block";
+            }
+            
+        });
+
+        filterbutton.addEventListener("click",function(){
+            
+            if (filter.style.display == "block")
+            {
+                filter.style.display = "none";
+            }
+
+            else{
+                filter.style.display = "block";
+            }
+            
+        });
+    </script>
     
 </body>
 </html>
