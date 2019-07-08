@@ -21,7 +21,8 @@ $gray : rgb(128, 128, 128);
     max-width: 1700px;
 
     @include desktop(){
-        width: 210%;
+        width: 100%;
+        max-width: 600px;
     }
 }
 
@@ -115,6 +116,10 @@ $gray : rgb(128, 128, 128);
     justify-content: space-between;
     align-items: center;
 
+    @include desktop(){
+        padding: 0.5rem;
+    }
+
 
     .logo, .cart{
         flex-basis: 30%;
@@ -132,6 +137,10 @@ $gray : rgb(128, 128, 128);
             color: $pink;
             padding: 0.5rem;
             font-size: 1.4rem;
+
+            @include desktop(){
+                font-size: 1rem;
+            }
         }
 
         .cartitem{
@@ -156,12 +165,16 @@ $gray : rgb(128, 128, 128);
         .logoname{
             text-transform: uppercase;
             font-size: 1.5rem;
+
+            @include desktop(){
+                font-size: 1.2rem;
+                margin-left: 0.5rem;
+            }
         }
     }
 
     
 }
-
 .search{
     border-left: solid 1px gray;
     border-right: solid 1px gray;
@@ -378,6 +391,19 @@ $gray : rgb(128, 128, 128);
 
     @include desktop(){
         flex-basis: 49%;
+        overflow: auto;
+    }
+
+    .card-img-top{
+        @include desktop(){
+            height: 10rem;
+        }
+    }
+    
+    .card-header{
+        @include desktop(){
+            padding: 0.3rem;
+        }
     }
 
     .card-body{
@@ -385,6 +411,10 @@ $gray : rgb(128, 128, 128);
         h3{
             font-size: 1.3rem;
             color: $blue;
+
+            @include desktop(){
+                font-size: 1rem;
+            }
         }
     }
 
@@ -396,6 +426,10 @@ $gray : rgb(128, 128, 128);
         align-items: center;
         color: #ffffff;
         font-size: 1.2rem;
+
+        @include desktop(){
+            font-size: 0.8rem;
+        }
 
         i{
             padding: 0 1rem;
@@ -490,7 +524,6 @@ $gray : rgb(128, 128, 128);
         }
     }
 }
-
 footer{
     .container{
         border-top: $lightgray 1px solid;
@@ -512,7 +545,7 @@ footer{
 
     @include desktop(){
         flex-basis: 45%;
-        margin: 1rem 2%;
+        margin: 0.5rem 1%;
     }
 
 
@@ -521,9 +554,7 @@ footer{
         font-size: 1rem;
         margin: 1rem 0;
 
-        @include desktop(){
-            font-size: 2rem;
-        }
+        
     }
 
     .footlist{
@@ -531,18 +562,14 @@ footer{
         color: gray;
         font-size: 0.8rem;
 
-        @include desktop(){
-            font-size: 1.5rem;
-        }
+      
     }
     .social{
         .socicon{
             margin-right: 0.5rem;
             margin-top: 1rem;
 
-            @include desktop(){
-                font-size: 2rem;
-            }
+          
         }
     }
 }
@@ -554,8 +581,14 @@ footer{
     justify-content: space-between;
     margin: 0.8rem 0;
     .copy{
-        color: $gray;              
+        color: $gray;
+        
+        @include desktop(){
+            font-size: 0.5rem;
+        }
 
     }
 }
+
+
 

@@ -11,7 +11,7 @@
 
 @media screen and (max-width: 600px) {
   #wrapper {
-    width: 210%;
+    width: 100%;
   }
 }
 
@@ -150,6 +150,12 @@
           align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+  .head {
+    padding: 0.5rem;
+  }
+}
+
 .head .logo, .head .cart {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
@@ -180,6 +186,12 @@
   font-size: 1.4rem;
 }
 
+@media screen and (max-width: 600px) {
+  .head .cart .icon-cart {
+    font-size: 1rem;
+  }
+}
+
 .head .cart .cartitem {
   font-size: 1rem;
   padding-left: 1rem;
@@ -202,6 +214,13 @@
 .head .logo .logoname {
   text-transform: uppercase;
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .head .logo .logoname {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+  }
 }
 
 .search {
@@ -231,6 +250,12 @@
   color: black;
 }
 
+@media screen and (max-width: 600px) {
+  .toplink .breadcrumb a {
+    font-size: 0.8rem;
+  }
+}
+
 .bottomlink {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -246,6 +271,13 @@
       align-content: center;
 }
 
+@media screen and (max-width: 600px) {
+  .bottomlink {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .bottomlink .productimg {
   -ms-flex-preferred-size: 49%;
       flex-basis: 49%;
@@ -257,6 +289,13 @@
       -ms-flex-direction: column;
           flex-direction: column;
   border: #dddddd 1px solid;
+}
+
+@media screen and (max-width: 600px) {
+  .bottomlink .productimg {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 .bottomlink .productimg .bigimg {
@@ -297,10 +336,25 @@
       flex-basis: 49%;
 }
 
+@media screen and (max-width: 600px) {
+  .bottomlink .productdesc {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 1%;
+  }
+}
+
 .bottomlink .productdesc .headtitle {
   font-size: 2rem;
   color: #ee1694;
   margin-bottom: 0.75rem;
+}
+
+@media screen and (max-width: 600px) {
+  .bottomlink .productdesc .headtitle {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
 }
 
 .bottomlink .productdesc .line {
@@ -312,6 +366,18 @@
 .bottomlink .productdesc .brand {
   font-weight: bold;
   margin: 0.3rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  .bottomlink .productdesc .brand {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bottomlink .productdesc .desc {
+    font-size: 0.8rem;
+  }
 }
 
 .bottomlink .productdesc .cart {
@@ -331,6 +397,12 @@
           align-items: center;
   background-color: #ee1694;
   color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .bottomlink .productdesc .cart {
+    height: 5rem;
+  }
 }
 
 .cartsection {
@@ -371,6 +443,12 @@
   border-bottom: #dddddd 1px solid;
 }
 
+@media screen and (max-width: 600px) {
+  .share {
+    font-size: 0.8rem;
+  }
+}
+
 .share .email {
   float: left;
   margin-right: 3rem;
@@ -380,67 +458,10 @@
   width: 5rem;
 }
 
-footer .container {
-  border-top: 1px #dddddd solid;
-  border-bottom: 1px #dddddd solid;
-}
-
-footer .container .footdiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.footitems {
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
-  margin: 2rem 0;
-}
-
-.footitems .foottitle {
-  font-weight: bold;
-  font-size: 1rem;
-  margin: 1rem 0;
-}
-
-.footitems .footlist {
-  list-style-type: none;
-  color: gray;
-  font-size: 0.8rem;
-}
-
-.footitems .social .socicon {
-  margin-right: 0.5rem;
-  margin-top: 1rem;
-}
-
-.copyright {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0.8rem 0;
-}
-
-.copyright .copy {
-  color: gray;
-  font-size: 0.8rem;
+@media screen and (max-width: 600px) {
+  .share img {
+    width: 3.5rem;
+  }
 }
 
 .controls-top {
@@ -448,6 +469,13 @@ footer .container .footdiv {
   background-color: #ee1694;
   padding-left: 95%;
   margin: 1.5rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  .controls-top {
+    padding-left: 90%;
+    margin: 1rem 0;
+  }
 }
 
 .controls-top a {
@@ -485,5 +513,83 @@ footer .container .footdiv {
 .card .card-footer i {
   padding: 0 1rem;
   border-left: 1px #ffffff solid;
+}
+
+footer .container {
+  border-top: #dddddd 1px solid;
+  border-bottom: #dddddd 1px solid;
+}
+
+footer .container .footdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footitems {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  margin: 2rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  .footitems {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    margin: 0.5rem 1%;
+  }
+}
+
+.footitems .foottitle {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.footitems .footlist {
+  list-style-type: none;
+  color: gray;
+  font-size: 0.8rem;
+}
+
+.footitems .social .socicon {
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0.8rem 0;
+}
+
+.copyright .copy {
+  color: gray;
+}
+
+@media screen and (max-width: 600px) {
+  .copyright .copy {
+    font-size: 0.5rem;
+  }
 }
 /*# sourceMappingURL=style3.css.map */

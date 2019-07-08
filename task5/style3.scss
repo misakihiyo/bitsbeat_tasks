@@ -20,7 +20,7 @@ $gray : rgb(128, 128, 128);
     max-width: 1700px;
 
     @include desktop(){
-        width: 210%;
+        width: 100%;
     }
 }
 
@@ -114,6 +114,10 @@ $gray : rgb(128, 128, 128);
     justify-content: space-between;
     align-items: center;
 
+    @include desktop(){
+        padding: 0.5rem;
+    }
+
 
     .logo, .cart{
         flex-basis: 30%;
@@ -131,6 +135,10 @@ $gray : rgb(128, 128, 128);
             color: $pink;
             padding: 0.5rem;
             font-size: 1.4rem;
+
+            @include desktop(){
+                font-size: 1rem;
+            }
         }
 
         .cartitem{
@@ -155,6 +163,11 @@ $gray : rgb(128, 128, 128);
         .logoname{
             text-transform: uppercase;
             font-size: 1.5rem;
+
+            @include desktop(){
+                font-size: 1.2rem;
+                margin-left: 0.5rem;
+            }
         }
     }
 
@@ -186,6 +199,10 @@ $gray : rgb(128, 128, 128);
         a{
             font-size: 1.2rem;
             color: black;
+
+            @include desktop(){
+                font-size: 0.8rem;
+            }
         }
     }
 }
@@ -196,6 +213,10 @@ $gray : rgb(128, 128, 128);
     justify-content: space-between;
     align-content: center;
 
+    @include desktop(){
+        flex-wrap: wrap;
+    }
+
     .productimg
     {
         flex-basis: 49%;
@@ -203,6 +224,10 @@ $gray : rgb(128, 128, 128);
         display: flex;
         flex-direction: column;
         border: $lightgray 1px solid;
+
+        @include desktop(){
+            flex-basis: 100%;
+        }
 
         .bigimg{
             width: 100%;
@@ -231,11 +256,20 @@ $gray : rgb(128, 128, 128);
 
     .productdesc{
         flex-basis: 49%;
+
+        @include desktop(){
+            flex-basis: 100%;
+            padding: 1%;
+        }
         
         .headtitle{
             font-size: 2rem;
             color: $pink;
             margin-bottom: 0.75rem;
+            @include desktop(){
+                font-size: 1.2rem;
+                margin-top: 0.5rem;
+            }
 
         }
 
@@ -247,6 +281,17 @@ $gray : rgb(128, 128, 128);
         .brand{
             font-weight: bold;
             margin: 0.3rem 0;
+
+            @include desktop(){
+                font-size: 0.8rem;
+            }
+        }
+
+        .desc{
+            @include desktop(){
+                font-size: 0.8rem;
+               
+            }
         }
 
         .cart{
@@ -257,6 +302,10 @@ $gray : rgb(128, 128, 128);
             align-items: center;
             background-color: $pink;
             color: #fff;
+
+            @include desktop(){
+                height: 5rem;
+            }
             
         }
     }
@@ -294,74 +343,37 @@ $gray : rgb(128, 128, 128);
     border-top: $lightgray 1px solid;
     border-bottom: $lightgray 1px solid;
 
+    @include desktop(){
+        font-size: 0.8rem;
+    }
+
     .email{
         float: left;
         
         margin-right: 3rem;
     }
 
-    img{
-        
+    img{        
         width: 5rem;
+
+        @include desktop(){
+            width: 3.5rem;
+        }
        
     }
 }
 
-footer{
-    .container{
-        border-top: 1px $lightgray solid;
-        border-bottom: 1px $lightgray solid;
-
-        .footdiv{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-
-        }
-    }
-}
-
-.footitems{
-    flex-basis: 20%;
-    margin: 2rem 0;
-    .foottitle{
-        font-weight: bold;
-        font-size: 1rem;
-        margin: 1rem 0;
-    }
-
-    .footlist{
-        list-style-type: none;
-        color: gray;
-        font-size: 0.8rem;
-    }
-    .social{
-        .socicon{
-            margin-right: 0.5rem;
-            margin-top: 1rem;
-        }
-    }
-}
-
-.copyright{
-   
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0.8rem 0;
-    .copy{
-        color: $gray;
-        font-size: 0.8rem;
-
-    }
-}
 
 .controls-top{
     padding: 0.5rem 0;
     background-color: $pink;
     padding-left: 95%;
     margin: 1.5rem 0;
+
+    @include desktop(){
+        padding-left: 90%;
+        margin: 1rem 0;
+    }
     
     a{
         color: #fff;
@@ -373,6 +385,7 @@ footer{
     }
     
 }
+
 
 .card{
     .card-body{
@@ -398,3 +411,72 @@ footer{
         }
     }
 }
+
+footer{
+    .container{
+        border-top: $lightgray 1px solid;
+        border-bottom: $lightgray 1px solid;
+        .footdiv{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+        }
+    }
+}
+
+.footitems{
+    flex-basis: 20%;
+    margin: 2rem 0;
+
+    @include desktop(){
+        flex-basis: 45%;
+        margin: 0.5rem 1%;
+    }
+
+
+    .foottitle{
+        font-weight: bold;
+        font-size: 1rem;
+        margin: 1rem 0;
+
+        
+    }
+
+    .footlist{
+        list-style-type: none;
+        color: gray;
+        font-size: 0.8rem;
+
+      
+    }
+    .social{
+        .socicon{
+            margin-right: 0.5rem;
+            margin-top: 1rem;
+
+          
+        }
+    }
+}
+
+.copyright{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.8rem 0;
+    .copy{
+        color: $gray;
+        
+        @include desktop(){
+            font-size: 0.5rem;
+        }
+
+    }
+}
+
+
+

@@ -12,7 +12,8 @@
 
 @media screen and (max-width: 600px) {
   #wrapper {
-    width: 210%;
+    width: 100%;
+    max-width: 600px;
   }
 }
 
@@ -151,6 +152,12 @@
           align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+  .head {
+    padding: 0.5rem;
+  }
+}
+
 .head .logo, .head .cart {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
@@ -181,6 +188,12 @@
   font-size: 1.4rem;
 }
 
+@media screen and (max-width: 600px) {
+  .head .cart .icon-cart {
+    font-size: 1rem;
+  }
+}
+
 .head .cart .cartitem {
   font-size: 1rem;
   padding-left: 1rem;
@@ -203,6 +216,13 @@
 .head .logo .logoname {
   text-transform: uppercase;
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .head .logo .logoname {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+  }
 }
 
 .search {
@@ -472,12 +492,31 @@
   .card {
     -ms-flex-preferred-size: 49%;
         flex-basis: 49%;
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card .card-img-top {
+    height: 10rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card .card-header {
+    padding: 0.3rem;
   }
 }
 
 .card .card-body h3 {
   font-size: 1.3rem;
   color: #1951aa;
+}
+
+@media screen and (max-width: 600px) {
+  .card .card-body h3 {
+    font-size: 1rem;
+  }
 }
 
 .card .card-footer {
@@ -496,6 +535,12 @@
           align-items: center;
   color: #ffffff;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .card .card-footer {
+    font-size: 0.8rem;
+  }
 }
 
 .card .card-footer i {
@@ -655,7 +700,7 @@ footer .container .footdiv {
   .footitems {
     -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
-    margin: 1rem 2%;
+    margin: 0.5rem 1%;
   }
 }
 
@@ -665,33 +710,15 @@ footer .container .footdiv {
   margin: 1rem 0;
 }
 
-@media screen and (max-width: 600px) {
-  .footitems .foottitle {
-    font-size: 2rem;
-  }
-}
-
 .footitems .footlist {
   list-style-type: none;
   color: gray;
   font-size: 0.8rem;
 }
 
-@media screen and (max-width: 600px) {
-  .footitems .footlist {
-    font-size: 1.5rem;
-  }
-}
-
 .footitems .social .socicon {
   margin-right: 0.5rem;
   margin-top: 1rem;
-}
-
-@media screen and (max-width: 600px) {
-  .footitems .social .socicon {
-    font-size: 2rem;
-  }
 }
 
 .copyright {
@@ -710,5 +737,11 @@ footer .container .footdiv {
 
 .copyright .copy {
   color: gray;
+}
+
+@media screen and (max-width: 600px) {
+  .copyright .copy {
+    font-size: 0.5rem;
+  }
 }
 /*# sourceMappingURL=styles2.css.map */
