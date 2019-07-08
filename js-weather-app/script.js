@@ -6,14 +6,36 @@ let cityName = document.getElementById("cityname");
 let icon = document.getElementById("icon");
 let temperature = document.getElementById("temp");
 let humidity = document.getElementById("humidity");
+let lat, long;
 
 searchButton.addEventListener("click", weatherDetails);
 searchInput.addEventListener("keyup", enterPress);
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    alert("Geolocation is not supported by this browser.");
+  }
+}
+
+function showPosition(position) {
+  lat = position.coords.latitude;
+  long= position.coords.longitude;
+
+  weatherCoordinates(lat, long);
+  console.log(lat,long);
+}
 
 function enterPress(event) {
   if (event.key === "Enter") {
     weatherDetails();
   }
+}
+
+function weatherCoordinates(lat, long){
+  let searchLink = "https://api.openweathermap.org/data/2.5/weather?" + "lat=" +lat +"&lon="+long + "&appid="+appKey;
+  httpRequestAsync(searchLink, response);
 }
 
 function weatherDetails() {
