@@ -7,6 +7,8 @@ let icon = document.getElementById("icon");
 let temperature = document.getElementById("temp");
 let humidity = document.getElementById("humidity");
 let lat, long;
+let sunrise = document.getElementById("sunrise");
+let sunset = document.getElementById("sunset");
 
 searchButton.addEventListener("click", weatherDetails);
 searchInput.addEventListener("keyup", enterPress);
@@ -53,6 +55,21 @@ function response(response) {
   icon.src = "http://openweathermap.org/img/w/" + jsonObject.weather[0].icon + ".png";
   temperature.innerHTML = parseInt(jsonObject.main.temp - 273) + "°";
   humidity.innerHTML = jsonObject.main.humidity + "%";
+  sunrise.innerHTML = getTime(jsonObject.sys.sunrise);
+  sunset.innerHTML = getTime(jsonObject.sys.sunset);
+}
+
+function getTime(timestamp){
+  var a = new Date(timestamp * 1000);
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var year = a.getFullYear();
+  var month = months[a.getMonth()];
+  var date = a.getDate();
+  var hour = a.getHours();
+  var min = a.getMinutes();
+  var sec = a.getSeconds();
+  var time = hour + ':' + min + ':' + sec ;
+  return time;
 }
 
 function httpRequestAsync(url, callback)

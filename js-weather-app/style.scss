@@ -26,7 +26,7 @@ body{
 
     main{
         margin: 2rem auto;
-        height: 20rem;
+        height: 25rem;
         background-color: rgb(96, 210, 255);
         padding: 3%;
         display: flex;
@@ -51,6 +51,7 @@ body{
             color: navy;
             text-transform: capitalize;
             font-weight: bold;
+            margin-top: 3%;
             
         }
         
@@ -92,4 +93,23 @@ input[type = "text"]{
     color: darkblue;
     
 }
+
+.sun{
+    border: black double 4px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 3%;
+    text-align: center;
+    font-size: 25px;
+    padding: 5%;
+
+    #sunrise{
+        border-right: solid black 1px;
+        padding-right: 12%;
+    }
+  }
+  
 
